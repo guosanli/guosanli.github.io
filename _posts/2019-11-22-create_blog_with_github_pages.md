@@ -1,63 +1,89 @@
 ---
 layout: post
-title: "可能是最全面的github pages搭建个人博客教程"
-date:   2022-11-22
+title: "如何自己科学上网（转瓦工vps）"
+date:   202-4-23
 tags: [geek]
 comments: true
 author: goldstine
 ---
 
-作为一个程序员怎么能没有自己的个人博客呢，这里详细记录和分享我的博客搭建经验，让你轻轻松松拥有自己的博客网站。傻瓜式一站式教你用 github pages 来搭建博客，详细记录全过程，保证你能学会。
-
-如果你是非程序员或者不关系技术细节，只需花 3 分钟阅读前面 5 个章节内容，就能轻松拥有自己的博客。
+作为一个程序员怎么能没有自己的科学工具呢，这里详细记录和分享我的科学工具搭建经验，让你轻轻松松拥有自己的工具。
 
 <!-- more -->
 
-## 开始
+## 为什么选择搬瓦工VPS
 
-话不多说，直接上图先来看下我的博客整体效果。[**点击在线预览我的博客**]( https://goldstine.github.io/blog/)，个人比较喜欢这种简约的博客风格，不要花里胡哨但该有的功也都有。
+话不多说，直接上图先来看下我的博客整体效果。，个人比较喜欢这种简约的博客风格，不要花里胡哨但该有的功也都有。
+之前购买了不同商家的云服务器，有阿里云的VPS，也有腾讯云VPS，还有亚马逊的VPS，最后觉得最好用的还是[**搬瓦工vps**]( [https://goldstine.github.io/blog/](https://www.bwh8.net/aff.php?aff=32874))。
 
-![blogPage](https://raw.githubusercontent.com/lemonchann/lemonchann.github.io/master/images/2019-11-22-create_blog_with_github_pages/blogPage.png)
+相比较而言性价比高，而且搬瓦工是国外的，你懂的，没有什么审核限制，一般来说，使用搬瓦工搭建一个自己的 VPN 来访问 Google 查询资料，看看文献什么的速度还是很快的。
 
 
 
-下面列举这个博客具有的功能特性，其中我比较看重归档和搜索能力。
+### 搬瓦工优惠码
 
-### 支持特性
+很多人不知道，搬搬瓦工官网隐藏了一个彩蛋，就是隐藏了优惠码，这个优惠码可以省掉一些费用，比如一年 19 刀的VPS，使用优惠码的时候只需 18 刀多一点，简直不能再划算了。
 
-- 简约风格博客
+点击进入搬瓦工官网进行注册就可以了，注册完之后可以选择以下可以获取优惠码的服务器，如果是个人使用的话，我觉得最便宜的已经很够用了，每个月500G的流量基本用不完的。
+搬瓦工配置	搬瓦工费用	优惠链接
+*SPECIAL 10G KVM PROMO V3 - LOS ANGELES - CN2 *
+SSD硬盘: 10 GB RAID-10
+RAM内存: 512 MB
+CPU处理器: 1x Intel Xeon
+Transfer流量: 500 GB/月
+连接速度: 1 Gigabit
+洛杉矶机房，CN2路线，使用中国的直线路线，速度加快	$29.99 /年	点击进入
+20G KVM – PROMO
+SSD硬盘: 20 GB RAID-10
+RAM内存: 1024 MB
+CPU处理器: 2x Intel Xeon
+Transfer流量: 1 TB/mo
+连接速度: 1 Gigabit
+Multiple locations	$49.99/年	点击进入
+40G KVM – PROMO
+SSD硬盘: 40 GB RAID-10
+RAM内存: 2 GB
+CPU处理器: 3x Intel Xeon
+Transfer流量: 2 TB/mo
+连接速度: 1 Gigabit
+Multiple locations	$99.99/年	点击进入
+80G KVM – PROMO
+SSD硬盘: 80 GB RAID-10
+RAM内存: 4 GB
+CPU处理器: 4x Intel Xeon
+Transfer流量: 3 TB/mo
+连接速度: 1 Gigabit
+Multiple locations	$19.99/月	点击进入
+160G KVM – PROMO
+SSD硬盘: 160 GB RAID-10
+RAM内存: 8 GB
+CPU处理器: 5x Intel Xeon
+Transfer流量: 4 TB/mo
+连接速度: 1 Gigabit
+Multiple locations	$39.99/月	点击进入
+3200G KVM – PROMO
+SSD硬盘: 320 GB RAID-10
+RAM内存: 16 GB
+CPU处理器: 6x Intel Xeon
+Transfer流量: 5 TB/mo
+连接速度: 1 Gigabit
+Multiple locations	$79.99/月	点击进入
 
-- Powered By Jekyll
 
-- 博客文章搜索
-
-- 自定义社交链接
-
-- 网站访客统计
-
-- Google Analytics 网站分析
-
-- Gitalk评论功能
-
-- 自定义关于about页面
-
-- 支持中文布局
-
-- 支持归档与标签
-
-- 支持改变主题颜色
-
-- 支持添加文章目录
-
+当你进到这个图1这个页面的时候呢，别急着点击「Add to Cart」添加到购物车，这里面暗藏着一个优惠码，很多人不知道，使用浏览器查看源代码， chrome浏览器的话按F12，然后搜索「code」，你会发现有一个 「Try this promo code: xxxx 」，这个xxxx就是优惠码，你把他复制下来，待会有用。
   
-
+![图1](https://raw.githubusercontent.com/lemonchann/lemonchann.github.io/master/images/2019-11-22-create_blog_with_github_pages/blogPage.png)
+页面的 Location 就是选择服务器的地址，到时访问谷歌的时候会显示你当前访问的地址。好了，我们点击「Add to Cart」。
+接下来，进入结算页面，我们刚才复制的优惠码就派上用场了，将你刚刚复制的优惠码复制进去然后点击 「Validate Code」，看！是不是优惠了！一般人不知道这种操作:
+![图2](https://camo.githubusercontent.com/a8c8d0dd09238c43f90a3910f08d7ed962c77adb59d20e82036f1d1f6ac7a667/68747470733a2f2f776973746265616e2e6769746875622e696f2f696d616765732f76706e352e706e67)
+接着点击「CheckOut」完成付款即可。付款的时候选择 Alipay 就可以使用支付宝付款。
 ## 建立博客Git仓库
 
 首先你要在[github](https://github.com/)上有自己博客仓库，用来生成和存放博客文章。你可以直接fork我的博客仓库。这样你马上有了自己的博客仓库。
 
 [点这里我的博客地址](https://github.com/goldstine/goldstine.github.io)进去点击 fork，之后在你自己的仓库下会看到刚复制的仓库，以后的操作都在你自己的仓库进行，当然想感谢我写这个教程就帮我点个 start 吧！
 
-![fork博客](https://raw.githubusercontent.com/goldstine/goldstine.github.io/master/images/2019-11-22-create_blog_with_github_pages/fork%E5%8D%9A%E5%AE%A2.png)
+
 
 **版权声明： fork之后_posts文件夹内容是我的博客文章，版权归我所有。你可以选择删除里面的文章替换上自己的博客文章，如需转载需要与我联系授权 **。
 
